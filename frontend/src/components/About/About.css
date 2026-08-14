@@ -1,0 +1,78 @@
+.about {
+  justify-content: center;
+  gap: 64px;
+  flex-wrap: wrap;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 761px;
+  width: 100%;
+}
+
+.intro,
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.line-placeholder {
+  height: 32px;
+  width: 100%;
+}
+
+.line-placeholder.w-539 {
+  max-width: 539px;
+}
+
+.line-placeholder.w-650 {
+  max-width: 650px;
+}
+
+.line-placeholder.w-428 {
+  max-width: 428px;
+}
+
+.tech-stack {
+  display: flex;
+  gap: 16px;
+}
+
+.tech-pill {
+  height: 40px;
+  width: 206px;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 761px;
+  width: 100%;
+}
+
+.contact-card {
+  background: var(--gray-mid);
+  padding: 40px;
+  width: 620px;
+  height: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  transform: rotate(-12.33deg);
+}
+
+.contact-thumbnail {
+  background: var(--gray-light);
+  height: 480px;
+  width: 100%;
+}
+
+.contact-tag {
+  background: var(--gray-light);
+  height: 64px;
+  width: 320px;
+}
