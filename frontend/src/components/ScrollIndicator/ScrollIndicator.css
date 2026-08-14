@@ -7,24 +7,6 @@
   z-index: 10;
 }
 
-.scroll-indicator::before,
-.scroll-indicator::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  width: 10px;
-  height: 3px;
-  background: #1a1a4d;
-}
-
-.scroll-indicator::before {
-  top: 0;
-}
-
-.scroll-indicator::after {
-  bottom: 0;
-}
-
 .scroll-indicator .tick {
   position: absolute;
   right: 0;
