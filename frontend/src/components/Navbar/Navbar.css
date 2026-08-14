@@ -11,11 +11,3 @@
   gap: 16px;
   z-index: 10;
 }
-
-.nav-block {
-  display: block;
-  height: 32px;
-  width: 100%;
-  background: var(--gray-mid);
-  text-decoration: none;
-}

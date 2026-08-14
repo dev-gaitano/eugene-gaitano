@@ -5,7 +5,7 @@ function Hero() {
     <>
       <section id="hero" className="section hero">
         <div className="hero-content">
-          <div className="placeholder h1-placeholder">Heading</div>
+          <h1>EUGENE GAITANO'S</h1>
           <div className="placeholder bubble-placeholder">
             Bubble text / intro copy
           </div>

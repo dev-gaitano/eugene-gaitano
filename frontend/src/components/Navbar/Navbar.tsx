@@ -5,12 +5,12 @@ function Navbar() {
   return (
     <>
       <nav className="navbar" aria-label="Primary">
-        <Link to="/" className="nav-block nav-home" aria-label="Home"></Link>
-        <Link
-          to="/resume"
-          className="nav-block nav-resume"
-          aria-label="Resume"
-        ></Link>
+        <Link to="/" className="nav-link nav-home" aria-label="Home">
+          HOME
+        </Link>
+        <Link to="/resume" className="nav-link nav-resume" aria-label="Resume">
+          RESUME
+        </Link>
       </nav>
     </>
   );

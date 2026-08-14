@@ -12,28 +12,10 @@
   width: 100%;
 }
 
-.intro,
 .bio {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-}
-
-.line-placeholder {
-  height: 32px;
-  width: 100%;
-}
-
-.line-placeholder.w-539 {
-  max-width: 539px;
-}
-
-.line-placeholder.w-650 {
-  max-width: 650px;
-}
-
-.line-placeholder.w-428 {
-  max-width: 428px;
+  gap: 16px;
 }
 
 .tech-stack {
@@ -69,10 +51,4 @@
   background: var(--gray-light);
   height: 480px;
   width: 100%;
-}
-
-.contact-tag {
-  background: var(--gray-light);
-  height: 64px;
-  width: 320px;
 }
