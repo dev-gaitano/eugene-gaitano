@@ -1,5 +1,13 @@
+import Navbar from "../components/Navbar/Navbar";
+import ScrollIndicator from "../components/ScrollIndicator/ScrollIndicator";
+
 function Home() {
-  return <></>;
+  return (
+    <>
+      <Navbar />
+      <ScrollIndicator />
+    </>
+  );
 }
 
 export default Home;
