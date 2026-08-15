@@ -1,14 +1,27 @@
+import { Canvas } from "@react-three/fiber";
+import ContactCard from "../ui/ContactCard";
+import { Suspense } from "react";
 import "./About.css";
 
 function About() {
+  const rotationX = Math.PI / 2;
+  const rotationY = 12.5 * (Math.PI / 180);
+  const rotationZ = -8 * (Math.PI / 180);
+
   return (
     <>
       <section id="about" className="section about">
         <div className="contact-container">
-          <div className="contact-card">
-            <div className="placeholder contact-thumbnail">Photo</div>
-            <h2>CONTACT ME</h2>
-          </div>
+          <Canvas>
+            <Suspense>
+              <ContactCard
+                rotationX={rotationX}
+                rotationY={rotationY}
+                rotationZ={rotationZ}
+                scale={0.18}
+              />
+            </Suspense>
+          </Canvas>
         </div>
 
         <div className="about-me">

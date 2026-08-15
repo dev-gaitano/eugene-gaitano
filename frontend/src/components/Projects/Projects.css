@@ -27,7 +27,7 @@
   gap: 16px;
 }
 
-.card-a {
+.card-a0 {
   background: var(--gray-light-3);
   top: 50%;
   left: 50%;
@@ -35,7 +35,7 @@
   z-index: 1;
 }
 
-.card-b {
+.card-b0 {
   background: var(--gray-light-2);
   top: 50%;
   left: 50%;
@@ -43,9 +43,30 @@
   z-index: 2;
 }
 
+.card-a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 840px;
+  width: 720px;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.card-b {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 840px;
+  width: 720px;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+
 .card-c {
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(-2deg);
-  z-index: 3;
+  height: 840px;
+  width: 720px;
+  z-index: 5;
 }
