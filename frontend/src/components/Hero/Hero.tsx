@@ -9,7 +9,7 @@ function Hero() {
       <section id="hero" className="section hero">
         <div className="hero-content">
           <h1>GAITANO'S</h1>
-          <div className="bubble-placeholder">
+          <div className="bubble-container">
             <Canvas>
               <Suspense fallback={null}>
                 <ambientLight intensity={0.1} />

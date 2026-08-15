@@ -7,12 +7,18 @@
   z-index: 10;
 }
 
+.scroll-marker.top {
+  position: absolute;
+  left: 0;
+  top: -12px;
+}
+
 .scroll-indicator .tick {
   position: absolute;
   right: 0;
   width: 4px;
   height: 2px;
-  background: #1a1a4d;
+  background: var(--black);
 }
 
 .scroll-indicator .tick.long {

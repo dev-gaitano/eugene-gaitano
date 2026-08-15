@@ -45,9 +45,10 @@ function About() {
             </p>
           </div>
           <div className="tech-stack">
-            <div className="placeholder tech-pill">Typescript</div>
-            <div className="placeholder tech-pill">Python</div>
-            <div className="placeholder tech-pill">PostgreSQL</div>
+            <div className="tech-pill">Typescript</div>
+            <div className="tech-pill">Python</div>
+            <div className="tech-pill">PostgreSQL</div>
+            <div className="tech-pill">3D modelling</div>
           </div>
         </div>
       </section>

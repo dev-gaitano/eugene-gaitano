@@ -11,28 +11,7 @@ function Projects() {
   return (
     <>
       <section id="projects" className="section projects">
-        {/*<article className="project-card card-a0">
-          <div className="placeholder project-thumbnail">Thumbnail</div>
-          <div className="project-details">
-            <h2>PROJECT NAME</h2>
-            <p>Project description</p>
-          </div>
-        </article>*/}
-        {/*<article className="project-card card-b">
-          <div className="placeholder project-thumbnail">Thumbnail</div>
-          <div className="project-details">
-            <h2>PROJECT NAME</h2>
-            <p>Project description</p>
-          </div>
-        </article>*/}
-        {/*<article className="project-card card-c">
-          <div className="placeholder project-thumbnail">Thumbnail</div>
-          <div className="project-details">
-            <h2>PROJECT NAME</h2>
-            <p>Project description</p>
-          </div>
-        </article>*/}
-        <article className="card-a">
+        <article className="project-card card-a">
           <Canvas>
             <Suspense>
               <ProjectCard
@@ -44,7 +23,7 @@ function Projects() {
             </Suspense>
           </Canvas>
         </article>
-        <article className="card-b">
+        <article className="project-card card-b">
           <Canvas>
             <Suspense>
               <ProjectCard01
@@ -56,7 +35,7 @@ function Projects() {
             </Suspense>
           </Canvas>
         </article>
-        <article className="card-c">
+        <article className="project-card card-c">
           <Canvas>
             <Suspense>
               <ProjectCard02

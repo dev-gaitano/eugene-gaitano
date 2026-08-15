@@ -4,69 +4,28 @@
 }
 
 .project-card {
-  background: var(--gray-mid);
   position: absolute;
-  width: 620px;
-  max-width: 90%;
-  height: 720px;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-.project-thumbnail {
-  background: var(--gray-light);
-  height: 480px;
-  width: 100%;
-}
-
-.project-details {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.card-a0 {
-  background: var(--gray-light-3);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-10deg);
-  z-index: 1;
-}
-
-.card-b0 {
-  background: var(--gray-light-2);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(12deg);
-  z-index: 2;
+  height: 840px;
+  width: 720px;
 }
 
 .card-a {
-  position: absolute;
+  z-index: 1;
   top: 50%;
   left: 50%;
-  height: 840px;
-  width: 720px;
   transform: translate(-50%, -50%);
-  z-index: 3;
 }
 
 .card-b {
-  position: absolute;
+  z-index: 2;
   top: 50%;
   left: 50%;
-  height: 840px;
-  width: 720px;
   transform: translate(-50%, -50%);
-  z-index: 4;
 }
 
 .card-c {
+  z-index: 3;
   top: 50%;
   left: 50%;
-  height: 840px;
-  width: 720px;
-  z-index: 5;
+  transform: translate(-50%, -50%);
 }
