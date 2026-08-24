@@ -22,6 +22,6 @@ function BubbleText({
 }
 
 // Load the model before it's needed
-useGLTF.preload("/portfolio_bubble_text_ss2.glb");
+useGLTF.preload("/portfolio_bubble_text_ss1.glb");
 
 export default BubbleText;
