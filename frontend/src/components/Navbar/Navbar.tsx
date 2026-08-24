@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-function Navbar() {
+interface NavbarProps {
+  className?: string;
+}
+
+function Navbar({ className }: NavbarProps) {
   return (
     <>
-      <nav className="navbar" aria-label="Primary">
+      <nav className={`navbar ${className}`} aria-label="Primary">
         <Link to="/" className="nav-link nav-home" aria-label="Home">
           HOME
         </Link>

@@ -2,7 +2,7 @@ import "./ScrollIndicator.css";
 
 interface ScrollIndicatorProps {
   children: React.ReactNode;
-  className: string;
+  className?: string;
 }
 
 function ScrollIndicator({ children, className }: ScrollIndicatorProps) {

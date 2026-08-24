@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import About from "../components/About/About";
 import Footer from "../components/Footer/Footer";
 import Hero from "../components/Hero/Hero";
@@ -11,8 +11,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
-    let tl = gsap.timeline({
+    if (!isLoaded) return;
+
+    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".main",
         start: "top top",
@@ -71,18 +75,34 @@ function Home() {
       tl.scrollTrigger?.kill();
       tl.kill();
     };
-  }, []);
+  }, [isLoaded]);
 
   return (
     <>
-      <Navbar />
-      <main className="main">
-        <Hero className="hero-section" />
+      {!isLoaded && (
+        <div className="loading-screen">
+          <div className="loading-logo">
+            <img
+              src="https://res.cloudinary.com/diwkfbsgv/image/upload/v1787583339/gaitano-logo_ajp6gp.png"
+              alt=""
+            />
+          </div>
+        </div>
+      )}
+
+      <Navbar className={`${!isLoaded ? "hidden" : ""}`} />
+
+      <main className={`main ${!isLoaded ? "hidden" : ""}`}>
+        <Hero className="hero-section" setIsLoaded={setIsLoaded} />
         <About className="about-section" />
         <Projects className="projects-section" />
       </main>
-      <Footer />
-      <ScrollIndicator className="scroll-indicator">
+
+      <Footer className={`footer-section ${!isLoaded ? "hidden" : ""}`} />
+
+      <ScrollIndicator
+        className={`scroll-indicator ${!isLoaded ? "hidden" : ""}`}
+      >
         <svg
           className="scroll-marker"
           xmlns="http://www.w3.org/2000/svg"
