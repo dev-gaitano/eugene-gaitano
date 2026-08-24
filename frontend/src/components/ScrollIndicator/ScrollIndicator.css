@@ -7,7 +7,7 @@
   z-index: 10;
 }
 
-.scroll-marker.top {
+.scroll-marker {
   position: absolute;
   left: 0;
   top: -12px;

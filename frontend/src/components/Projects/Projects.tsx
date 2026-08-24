@@ -5,12 +5,16 @@ import "./Projects.css";
 import ProjectCard01 from "../ui/ProjectCard01";
 import ProjectCard02 from "../ui/ProjectCard02";
 
-function Projects() {
+interface ProjectsProps {
+  className: string;
+}
+
+function Projects({ className }: ProjectsProps) {
   const rotationX = Math.PI / 2;
 
   return (
     <>
-      <section id="projects" className="section projects">
+      <section id="projects" className={`section projects ${className}`}>
         <article className="project-card card-a">
           <Canvas>
             <Suspense>

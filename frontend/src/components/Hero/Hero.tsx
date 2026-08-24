@@ -3,10 +3,14 @@ import BubbleText from "../ui/BubbleText";
 import { Suspense } from "react";
 import "./Hero.css";
 
-function Hero() {
+interface HeroProps {
+  className: string;
+}
+
+function Hero({ className }: HeroProps) {
   return (
     <>
-      <section id="hero" className="section hero">
+      <section id="hero" className={`section hero ${className}`}>
         <div className="hero-content">
           <h1>GAITANO'S</h1>
           <div className="bubble-container">

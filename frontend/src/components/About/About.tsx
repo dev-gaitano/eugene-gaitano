@@ -3,14 +3,18 @@ import ContactCard from "../ui/ContactCard";
 import { Suspense } from "react";
 import "./About.css";
 
-function About() {
+interface AboutProps {
+  className: string;
+}
+
+function About({ className }: AboutProps) {
   const rotationX = Math.PI / 2;
   const rotationY = 12.5 * (Math.PI / 180);
   const rotationZ = -8 * (Math.PI / 180);
 
   return (
     <>
-      <section id="about" className="section about">
+      <section id="about" className={`section about ${className}`}>
         <div className="contact-container">
           <Canvas>
             <Suspense>
