@@ -8,7 +8,7 @@ function BubbleText({
   scale,
 }: BubbleTextProps) {
   // Get scene attribute from model
-  const model = useGLTF("/portfolio_bubble_text.glb");
+  const model = useGLTF("/portfolio_bubble_text_ss1.glb");
   const model_scene = model.scene;
 
   // return a primitive element
@@ -22,6 +22,6 @@ function BubbleText({
 }
 
 // Load the model before it's needed
-useGLTF.preload("/portfolio_bubble_text.glb");
+useGLTF.preload("/portfolio_bubble_text_ss2.glb");
 
 export default BubbleText;
