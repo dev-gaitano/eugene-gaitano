@@ -36,12 +36,11 @@ function About() {
               studying theory, and it shows in how I work. I like taking a rough
               idea and getting it into something people can actually use. Most
               of my work sits at the intersection of backend systems and
-              frontend design, so I care about both how something works and how
-              it feels to use. I've deployed my own projects to production and
+              frontend design, I care about both how something works and how it
+              feels to use. I've deployed my own projects to production and
               dealt with the mess that comes with that. I'm still learning
               constantly, picking up new tools and patterns as projects demand
-              them. Outside of work, you'll usually find me gaming or spending
-              time with my dog.
+              them.
             </p>
           </div>
           <div className="tech-stack">
