@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import "./Projects.css";
 import ProjectCard01 from "../ui/ProjectCard01";
 import ProjectCard02 from "../ui/ProjectCard02";
+import { useIsMobile } from "../../hooks/useIsMobile";
 
 interface ProjectsProps {
   className: string;
@@ -11,6 +12,9 @@ interface ProjectsProps {
 
 function Projects({ className }: ProjectsProps) {
   const rotationX = Math.PI / 2;
+
+  const isMobile = useIsMobile();
+  const scale = isMobile ? 0.24 : 0.25;
 
   return (
     <>
@@ -22,7 +26,7 @@ function Projects({ className }: ProjectsProps) {
                 rotationX={rotationX}
                 rotationY={10 * (Math.PI / 180)}
                 rotationZ={0}
-                scale={0.25}
+                scale={scale}
               />
             </Suspense>
           </Canvas>
@@ -34,7 +38,7 @@ function Projects({ className }: ProjectsProps) {
                 rotationX={rotationX}
                 rotationY={-12 * (Math.PI / 180)}
                 rotationZ={0}
-                scale={0.25}
+                scale={scale}
               />
             </Suspense>
           </Canvas>
@@ -46,7 +50,7 @@ function Projects({ className }: ProjectsProps) {
                 rotationX={rotationX}
                 rotationY={2 * (Math.PI / 180)}
                 rotationZ={0}
-                scale={0.25}
+                scale={scale}
               />
             </Suspense>
           </Canvas>

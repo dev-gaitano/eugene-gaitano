@@ -2,6 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import ContactCard from "../ui/ContactCard";
 import { Suspense } from "react";
 import "./About.css";
+import { useIsMobile } from "../../hooks/useIsMobile";
 
 interface AboutProps {
   className: string;
@@ -12,6 +13,10 @@ function About({ className }: AboutProps) {
   const rotationY = 12.5 * (Math.PI / 180);
   const rotationZ = -8 * (Math.PI / 180);
 
+  const isMobile = useIsMobile();
+  const scale = isMobile ? 0.24 : 0.18;
+  const rotation: [number, number] = isMobile ? [0, 0] : [rotationY, rotationZ];
+
   return (
     <>
       <section id="about" className={`section about ${className}`}>
@@ -20,9 +25,9 @@ function About({ className }: AboutProps) {
             <Suspense>
               <ContactCard
                 rotationX={rotationX}
-                rotationY={rotationY}
-                rotationZ={rotationZ}
-                scale={0.18}
+                rotationY={rotation[0]}
+                rotationZ={rotation[1]}
+                scale={scale}
               />
             </Suspense>
           </Canvas>

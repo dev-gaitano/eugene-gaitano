@@ -25,3 +25,9 @@
   width: 10px;
   height: 3px;
 }
+
+@media (max-width: 768px) {
+  .scroll-indicator {
+    display: none;
+  }
+}

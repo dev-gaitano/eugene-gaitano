@@ -29,3 +29,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@media (max-width: 768px) {
+  .project-card {
+    height: 800px;
+    width: 680px;
+    max-width: 95vw;
+    max-height: 110vw;
+  }
+}
+

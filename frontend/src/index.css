@@ -91,3 +91,18 @@ h2 {
 .scroll-indicator.hidden {
   display: none;
 }
+
+@media (max-width: 768px) {
+  :root {
+    --side-gap: 20px;
+    --nav-width: 0px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+}

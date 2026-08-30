@@ -54,3 +54,19 @@
   border-top: 1px solid #333;
   padding-top: 24px;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+}
