@@ -9,26 +9,18 @@ interface AboutProps {
 }
 
 function About({ className }: AboutProps) {
-  const rotationX = Math.PI / 2;
-  const rotationY = 12.5 * (Math.PI / 180);
-  const rotationZ = -8 * (Math.PI / 180);
-
   const isMobile = useIsMobile();
-  const scale = isMobile ? 0.24 : 0.18;
-  const rotation: [number, number] = isMobile ? [0, 0] : [rotationY, rotationZ];
+  const scale = isMobile ? 0.28 : 0.18;
 
   return (
     <>
       <section id="about" className={`section about ${className}`}>
         <div className="contact-container">
           <Canvas>
+            <ambientLight intensity={1.0} />
+            <directionalLight position={[2, 2, 4]} intensity={1.5} />
             <Suspense>
-              <ContactCard
-                rotationX={rotationX}
-                rotationY={rotation[0]}
-                rotationZ={rotation[1]}
-                scale={scale}
-              />
+              <ContactCard scale={scale} />
             </Suspense>
           </Canvas>
         </div>
