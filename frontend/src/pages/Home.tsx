@@ -5,6 +5,8 @@ import Hero from "../components/Hero/Hero";
 import Navbar from "../components/Navbar/Navbar";
 import Projects from "../components/Projects/Projects";
 import ScrollIndicator from "../components/ScrollIndicator/ScrollIndicator";
+import { SCROLL_POSITIONS } from "../components/ScrollIndicator/scrollPositions";
+import { useIsMobile } from "../hooks/useIsMobile";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -12,9 +14,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     if (!isLoaded) return;
+
+    const markerProp = isMobile ? "left" : "top";
+    const exitProp = isMobile ? "y" : "x";
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -24,58 +30,29 @@ function Home() {
         scrub: true,
         snap: {
           snapTo: "labels",
-          duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-          delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
-          ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
+          duration: { min: 0.2, max: 3 },
+          delay: 0.2,
+          ease: "power1.inOut",
         },
       },
     });
 
-    tl.addLabel("1")
-      .to(".scroll-marker", { top: "0%" })
-      .addLabel("2")
-      .to(".scroll-marker", { top: "5%" })
-      .addLabel("3")
-      .to(".scroll-marker", { top: "10%" })
-      .addLabel("4")
-      .to(".scroll-marker", { top: "15%" })
-      .addLabel("5")
-      .to(".scroll-marker", { top: "20%" })
-      .addLabel("6")
-      .to(".scroll-marker", { top: "25%" })
-      .addLabel("7")
-      .to(".scroll-marker", { top: "30%" })
-      .addLabel("8")
-      .to(".scroll-marker", { top: "35%" })
-      .addLabel("9")
-      .to(".scroll-marker", { top: "40%" })
-      .addLabel("10")
-      .to(".scroll-marker", { top: "45%" })
-      .addLabel("11")
-      .to(".scroll-marker", { top: "50%" })
-      .addLabel("12")
-      .to(".scroll-marker", { top: "55%" })
-      .addLabel("13")
-      .to(".scroll-marker", { top: "60%" })
-      .addLabel("14")
-      .to(".scroll-marker", { top: "65%" })
-      .addLabel("15")
-      .to(".scroll-marker", { top: "70%" })
-      .addLabel("16")
-      .to(".scroll-marker", { top: "75%" })
-      .addLabel("17")
-      .to(".scroll-marker", { top: "80%" })
-      .addLabel("18")
-      .to(".scroll-marker", { top: "85%" })
-      .addLabel("19")
-      .to(".scroll-marker", { top: "90%" })
-      .to(".scroll-indicator", { x: 50, opacity: 0, duration: 1 });
+    SCROLL_POSITIONS.forEach((position, index) => {
+      tl.addLabel(String(index + 1));
+      tl.to(".scroll-marker", { [markerProp]: position });
+    });
+
+    tl.to(".scroll-indicator", {
+      [exitProp]: 50,
+      opacity: 0,
+      duration: 1,
+    });
 
     return () => {
       tl.scrollTrigger?.kill();
       tl.kill();
     };
-  }, [isLoaded]);
+  }, [isLoaded, isMobile]);
 
   return (
     <>

@@ -7,6 +7,12 @@
   z-index: 10;
 }
 
+.scroll-indicator-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 .scroll-marker {
   position: absolute;
   left: 0;
@@ -16,6 +22,7 @@
 .scroll-indicator .tick {
   position: absolute;
   right: 0;
+  top: var(--pos);
   width: 4px;
   height: 2px;
   background: var(--black);
@@ -28,6 +35,31 @@
 
 @media (max-width: 768px) {
   .scroll-indicator {
-    display: none;
+    right: auto;
+    left: calc(50% - 64px);
+    bottom: 40px;
+    width: 128px;
+    height: 32px;
+  }
+
+  .scroll-marker {
+    top: auto;
+    bottom: 0;
+    left: -12px;
+    transform: rotate(90deg);
+  }
+
+  .scroll-indicator .tick {
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: var(--pos);
+    width: 2px;
+    height: 4px;
+  }
+
+  .scroll-indicator .tick.long {
+    width: 3px;
+    height: 10px;
   }
 }
