@@ -5,9 +5,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import type { Group } from "three";
 import { useIsMobile } from "../../hooks/useIsMobile";
 import type { ContactCardProps } from "../../types/MeshImportProps";
-
-gsap.registerPlugin(ScrollTrigger);
-
 import {
   DESKTOP_ROTATION_START,
   DESKTOP_ROTATION_END,
@@ -15,16 +12,9 @@ import {
   MOBILE_ROTATION_END,
 } from "./contactCardConstants";
 
-function ContactCard({
-  rotationX,
-  startX,
-  startY,
-  startZ,
-  endX,
-  endY,
-  endZ,
-  scale,
-}: ContactCardProps) {
+gsap.registerPlugin(ScrollTrigger);
+
+function ContactCard({ scale }: ContactCardProps) {
   const cardRef = useRef<Group>(null);
   const isMobile = useIsMobile();
 
@@ -40,14 +30,14 @@ function ContactCard({
       : DESKTOP_ROTATION_START;
     const defaultEnd = isMobile ? MOBILE_ROTATION_END : DESKTOP_ROTATION_END;
 
-    const initialX = startX ?? rotationX ?? defaultStart.x;
-    const initialY = startY ?? defaultStart.y;
-    const initialZ = startZ ?? defaultStart.z;
-    const finalX = endX ?? rotationX ?? defaultEnd.x;
-    const finalY = endY ?? defaultEnd.y;
-    const finalZ = endZ ?? defaultEnd.z;
+    const initialX = defaultStart.x;
+    const initialY = defaultStart.y;
+    const initialZ = defaultStart.z;
+    const finalX = defaultEnd.x;
+    const finalY = defaultEnd.y;
+    const finalZ = defaultEnd.z;
 
-    const ctx = gsap.context(() => {
+    const context = gsap.context(() => {
       gsap.fromTo(
         cardRef.current!.rotation,
         {
@@ -71,8 +61,8 @@ function ContactCard({
       );
     });
 
-    return () => ctx.revert();
-  }, [isMobile, rotationX, startX, startY, startZ, endX, endY, endZ]);
+    return () => context.revert();
+  }, [isMobile]);
 
   // return a primitive element
   return (

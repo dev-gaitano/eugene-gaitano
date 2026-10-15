@@ -2,6 +2,7 @@ import { useGLTF } from "@react-three/drei";
 import { useEffect } from "react";
 
 interface BubbleTextProps {
+  modelPath: string;
   rotationX: number;
   rotationY: number;
   rotationZ: number;
@@ -10,6 +11,7 @@ interface BubbleTextProps {
 }
 
 function BubbleText({
+  modelPath,
   rotationX,
   rotationY,
   rotationZ,
@@ -17,7 +19,7 @@ function BubbleText({
   setIsLoaded,
 }: BubbleTextProps) {
   // Get scene attribute from model
-  const model = useGLTF("/portfolio_bubble_text_ss1.glb");
+  const model = useGLTF(modelPath);
   const model_scene = model.scene;
 
   // Update isLoaded state variable to match model load state
@@ -35,7 +37,8 @@ function BubbleText({
   );
 }
 
-// Load the model before it's needed
+// Load the models before they're needed
 useGLTF.preload("/portfolio_bubble_text_ss1.glb");
+useGLTF.preload("/portfolio_bubble_text_mobile.glb");
 
 export default BubbleText;
