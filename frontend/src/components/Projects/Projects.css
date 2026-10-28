@@ -1,12 +1,26 @@
 .projects {
   position: relative;
   justify-content: center;
+  overflow: hidden;
 }
 
 .project-card {
   position: absolute;
   height: 840px;
   width: 720px;
+}
+
+.project-card-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.project-card.active {
+  cursor: pointer;
+}
+
+.project-card.inactive {
+  pointer-events: none;
 }
 
 .card-a {
