@@ -1,6 +1,5 @@
 import { useGLTF } from "@react-three/drei";
 import type { ProjectCardProps } from "../../types/MeshImportProps";
-import { useMemo } from "react";
 
 function ProjectCard02({
   rotationX,
@@ -9,14 +8,13 @@ function ProjectCard02({
   scale,
 }: ProjectCardProps) {
   // Get scene attribute from model
-  const model = useGLTF("/project_card_wayalink.glb");
+  const model = useGLTF("/project_card_jasmijn_schrofer.glb");
   const modelScene = model.scene;
-  const clonedScene = useMemo(() => modelScene.clone(), [modelScene]);
 
   // return a primitive element
   return (
     <primitive
-      object={clonedScene}
+      object={modelScene}
       scale={scale}
       rotation={[rotationX, rotationY, rotationZ]}
     />
@@ -24,6 +22,6 @@ function ProjectCard02({
 }
 
 // Load the model before it's needed
-useGLTF.preload("/project_card_wayalink.glb");
+useGLTF.preload("/project_card_jasmijn_schrofer.glb");
 
 export default ProjectCard02;

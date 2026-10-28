@@ -8,7 +8,7 @@ function ProjectCard({
   scale,
 }: ProjectCardProps) {
   // Get scene attribute from model
-  const model = useGLTF("/project_card_jasmijn_schrofer.glb");
+  const model = useGLTF("/project_card_wayalink.glb");
   const model_scene = model.scene;
 
   // return a primitive element
@@ -22,6 +22,6 @@ function ProjectCard({
 }
 
 // Load the model before it's needed
-useGLTF.preload("/project_card_jasmijn_schrofer.glb");
+useGLTF.preload("/project_card_wayalink.glb");
 
 export default ProjectCard;
