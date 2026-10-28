@@ -9,7 +9,7 @@ function ProjectCard02({
   scale,
 }: ProjectCardProps) {
   // Get scene attribute from model
-  const model = useGLTF("/project_card.glb");
+  const model = useGLTF("/project_card_wayalink.glb");
   const modelScene = model.scene;
   const clonedScene = useMemo(() => modelScene.clone(), [modelScene]);
 
@@ -24,6 +24,6 @@ function ProjectCard02({
 }
 
 // Load the model before it's needed
-useGLTF.preload("/project_card.glb");
+useGLTF.preload("/project_card_wayalink.glb");
 
 export default ProjectCard02;

@@ -38,7 +38,7 @@ function BubbleText({
 }
 
 // Load the models before they're needed
-useGLTF.preload("/portfolio_bubble_text_ss1.glb");
+useGLTF.preload("/portfolio_bubble_text_desktop.glb");
 useGLTF.preload("/portfolio_bubble_text_mobile.glb");
 
 export default BubbleText;

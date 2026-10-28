@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import "./Hero.css";
 import { useIsMobile } from "../../hooks/useIsMobile";
 
-const DESKTOP_BUBBLE_MODEL = "/portfolio_bubble_text_ss1.glb";
+const DESKTOP_BUBBLE_MODEL = "/portfolio_bubble_text_desktop.glb";
 const MOBILE_BUBBLE_MODEL = "/portfolio_bubble_text_mobile.glb";
 
 interface HeroProps {
