@@ -28,7 +28,7 @@ export const MOBILE_ROTATION_START: CardRotation = {
 };
 
 export const MOBILE_ROTATION_END: CardRotation = {
-  x: ROTATION_X,
+  x: Math.PI / 2.5,
   y: 0,
   z: 0,
 };
