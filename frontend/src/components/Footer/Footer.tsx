@@ -1,9 +1,13 @@
 import "./Footer.css";
 
-function Footer() {
+interface FooterProps {
+  className: string;
+}
+
+function Footer({ className }: FooterProps) {
   return (
     <>
-      <footer id="footer" className="section footer">
+      <footer id="footer" className={`section footer ${className}`}>
         <div className="container">
           <div className="footer-content">
             <h2 className="footer-logo">Eugene Gaitano</h2>

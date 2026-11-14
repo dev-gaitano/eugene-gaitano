@@ -2,24 +2,25 @@ import { Canvas } from "@react-three/fiber";
 import ContactCard from "../ui/ContactCard";
 import { Suspense } from "react";
 import "./About.css";
+import { useIsMobile } from "../../hooks/useIsMobile";
 
-function About() {
-  const rotationX = Math.PI / 2;
-  const rotationY = 12.5 * (Math.PI / 180);
-  const rotationZ = -8 * (Math.PI / 180);
+interface AboutProps {
+  className: string;
+}
+
+function About({ className }: AboutProps) {
+  const isMobile = useIsMobile();
+  const scale = isMobile ? 0.28 : 0.18;
 
   return (
     <>
-      <section id="about" className="section about">
+      <section id="about" className={`section about ${className}`}>
         <div className="contact-container">
           <Canvas>
+            <ambientLight intensity={1.0} />
+            <directionalLight position={[2, 2, 4]} intensity={1.5} />
             <Suspense>
-              <ContactCard
-                rotationX={rotationX}
-                rotationY={rotationY}
-                rotationZ={rotationZ}
-                scale={0.18}
-              />
+              <ContactCard scale={scale} />
             </Suspense>
           </Canvas>
         </div>

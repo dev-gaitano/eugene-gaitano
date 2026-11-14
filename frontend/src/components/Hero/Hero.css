@@ -14,3 +14,9 @@
   height: 400px;
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .bubble-container {
+    height: 280px;
+  }
+}
