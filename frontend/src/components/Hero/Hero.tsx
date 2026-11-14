@@ -24,8 +24,8 @@ function Hero({ className, setIsLoaded }: HeroProps) {
           <div className="bubble-container">
             <Canvas>
               <Suspense fallback={null}>
-                <ambientLight intensity={0.1} />
-                <directionalLight color="red" position={[0, 0, 5]} />
+                <ambientLight intensity={0.8} />
+                <directionalLight position={[0, 0, 5]} intensity={1.0} />
                 <BubbleText
                   key={isMobile ? "mobile" : "desktop"}
                   modelPath={
