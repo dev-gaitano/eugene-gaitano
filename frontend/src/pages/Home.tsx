@@ -60,7 +60,7 @@ function Home() {
         <div className="loading-screen">
           <div className="loading-logo">
             <img
-              src="https://res.cloudinary.com/diwkfbsgv/image/upload/v1787583339/gaitano-logo_ajp6gp.png"
+              src="https://res.cloudinary.com/diwkfbsgv/image/upload/v1788087508/gaitano-logo-white_eyypki.png"
               alt=""
             />
           </div>
@@ -86,7 +86,7 @@ function Home() {
           height="24px"
           viewBox="0 -960 960 960"
           width="24px"
-          fill="var(--black)"
+          fill="var(--white)"
         >
           <path d="M400-280v-400l200 200-200 200Z" />
         </svg>

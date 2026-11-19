@@ -32,8 +32,6 @@
     align-items: center;
     padding-top: 0;
     gap: 32px;
-    background: rgba(254, 255, 252, 0.85);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--gray-light);
+    backdrop-filter: blur(40px);
   }
 }

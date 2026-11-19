@@ -25,7 +25,7 @@
   top: var(--pos);
   width: 4px;
   height: 2px;
-  background: var(--black);
+  background: var(--white);
 }
 
 .scroll-indicator .tick.long {

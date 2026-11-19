@@ -1,7 +1,6 @@
 .resume-page {
   min-height: 100vh;
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--black);
   padding: 100px var(--side-gap) 60px calc(var(--nav-width) + var(--side-gap));
   font-family: "Space Grotesk", sans-serif;
 }
@@ -20,7 +19,7 @@
   justify-content: space-between;
   align-items: flex-start;
   padding-bottom: 24px;
-  border-bottom: 2px solid var(--black);
+  border-bottom: 2px solid var(--white);
 }
 
 .resume-title-box h1 {
@@ -49,8 +48,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: var(--black);
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--black);
   border: 2px solid var(--black);
   padding: 12px 20px;
   font-family: "Space Grotesk", sans-serif;
@@ -72,7 +71,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px 40px;
-  background: var(--white);
   border: 1px solid var(--gray-light-2);
   padding: 20px 24px;
 }
@@ -92,7 +90,7 @@
 }
 
 .contact-item a {
-  color: var(--black);
+  color: var(--white);
   text-decoration: none;
   font-weight: 600;
   border-bottom: 1px solid var(--black);
@@ -127,7 +125,6 @@
 .summary-text {
   font-size: 16px;
   line-height: 1.6;
-  color: var(--black);
 }
 
 /* Experience Items */
@@ -193,8 +190,7 @@
 }
 
 .skill-tag {
-  background-color: var(--gray-light-3);
-  color: var(--black);
+  color: var(--gray-light-3);
   padding: 6px 12px;
   font-size: 13px;
   font-weight: 600;
@@ -202,6 +198,7 @@
 }
 
 .skill-tag.highlight {
+  color: var(--black);
   background-color: var(--primary);
   border-color: var(--black);
 }
@@ -249,7 +246,6 @@
 
 /* Print Styles */
 @media print {
-
   .navbar,
   .footer-section,
   .resume-actions,
